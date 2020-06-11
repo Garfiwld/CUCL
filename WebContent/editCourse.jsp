@@ -53,7 +53,7 @@
   </div>
 </div>
 
-</br>
+<br>
 
 <div class="card">
   <div class="card-header">
@@ -77,7 +77,7 @@
   </div>
 </div>
 
-</br>
+<br>
 
 <table class="table table-striped">
   <thead>

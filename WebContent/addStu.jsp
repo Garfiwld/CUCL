@@ -43,7 +43,12 @@
 				<div class="form-group col-md-6">
 					<label for="inputState">Section</label> <select id="inputState"
 						class="form-control">
-						<option selected>RA</option>
+						<option value="RA">RA</option>
+						<option value="RB">RB</option>
+						<option value="RC">RC</option>
+						<option value="DA">DA</option>
+						<option value="DA">DB</option>
+						<option value="DA">CSB</option>
 					</select>
 				</div>
 			</div>
@@ -55,7 +60,7 @@
 		</div>
 	</div>
 
-	</br>
+	<br>
 
 	<div class="card">
 		<div class="card-header">Import</div>
