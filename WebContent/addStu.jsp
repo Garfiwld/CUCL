@@ -20,7 +20,7 @@
 	<%@include file="menu.jsp"%>
 
 	<h1>Add Studen</h1>
-
+<Form action="<%=request.getContextPath()%>/createStudent" method="post">
 	<div class="card">
 		<div class="card-header">One by One</div>
 		<div class="card-body">
@@ -28,21 +28,25 @@
 			<div class="form-row">
 				<div class="form-group col-md-6">
 					<label for="inputEmail4">Fristname</label> <input type="text"
-						class="form-control" id="inputEmail4">
+						class="form-control" id="inputEmail4" name="Firstname">
 				</div>
 				<div class="form-group col-md-6">
 					<label for="inputPassword4">Lastname</label> <input type="text"
-						class="form-control" id="inputPassword4">
+						class="form-control" id="inputPassword4" name="Lastname">
 				</div>
 			</div>
 			<div class="form-row">
 				<div class="form-group col-md-6">
 					<label for="inputUsername">Username</label> <input type="text"
-						class="form-control" id="inputUsername">
+						class="form-control" id="inputUsername" name="Username">
+				</div>
+					<div class="form-group col-md-6">
+					<label for="inputUsername">Password</label> <input type="text"
+						class="form-control" id="inputUsername" name="Password">
 				</div>
 				<div class="form-group col-md-6">
 					<label for="inputState">Section</label> <select id="inputState"
-						class="form-control">
+						class="form-control" name="Section">
 						<option value="RA">RA</option>
 						<option value="RB">RB</option>
 						<option value="RC">RC</option>
@@ -53,7 +57,7 @@
 				</div>
 			</div>
 		</div>
-
+</Form>
 
 		<div class="card-footer text-muted">
 			<button type="submit" class="btn btn-primary btn-lg btn-block">ADD</button>

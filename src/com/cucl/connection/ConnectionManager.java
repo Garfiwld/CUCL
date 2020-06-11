@@ -5,10 +5,17 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
 import com.cucl.model.Teacher;
 
 public class ConnectionManager {
-
+	private static Connection connection = null;
 	public boolean validate(Teacher teacher) throws ClassNotFoundException {
 		boolean status = false;
 
@@ -50,4 +57,53 @@ public class ConnectionManager {
 			}
 		}
 	}
+	public static Connection getConnection() throws NamingException, SQLException {
+		System.out.print("dsad");
+		DataSource ds = null;
+		String jdbcName = "jdbc/ssbDS";	
+		Context initContext = new InitialContext();	
+		Context envContext = (Context) initContext.lookup("java:/comp/env");
+		ds = (DataSource) envContext.lookup(jdbcName);	
+		connection = ds.getConnection();
+		if (connection == null) {
+			System.out.println("not connec");
+		}else {
+			System.out.println(" connec");
+		}
+		return connection;
+	}
+public static void close(Connection cnnt, Statement stmt, PreparedStatement pstmt, ResultSet rs) {
+    	
+    	try {
+            if (rs != null && !rs.isClosed()) {
+            	rs.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    	
+    	try {
+            if (stmt != null && !stmt.isClosed()) {
+            	stmt.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    	
+    	try {
+            if (pstmt != null && !pstmt.isClosed()) {
+            	pstmt.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    	
+    	try {
+            if (cnnt != null && !cnnt.isClosed()) {
+                cnnt.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

@@ -1,6 +1,6 @@
 package com.cucl.model;
 
-class Student {
+	public class Student {
     String Firstname,Lastname,Section,Password,Username;
 
     public Student(String Username, String Firstname, String Lastname, String Password, String Section) {
