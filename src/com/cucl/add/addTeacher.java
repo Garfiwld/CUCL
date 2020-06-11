@@ -1,16 +1,17 @@
 package com.cucl.add;
 
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import com.cucl.model.Teacher;
 
-public class editTeacher {
+public class addTeacher {
 
     public int registerEmployee(Teacher teacher) throws ClassNotFoundException {
-        String INSERT_USERS_SQL = "INSERT INTO employee" +
-            "  (id, first_name, last_name, username, password, address, contact) VALUES " +
+        String INSERT_USERS_SQL = "INSERT INTO teacher" +
+            "  (Te_Username, Te_Firstname, Te_Lastname, Te_Password) VALUES " +
             " (?, ?, ?, ?);";
 
         int result = 0;

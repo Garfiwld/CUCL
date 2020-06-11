@@ -20,40 +20,40 @@
 	<%@include file="menu.jsp"%>
 
 	<h1>Edit Teacher</h1>
+	<form action="<%=request.getContextPath()%>/addTeacher" method="post">
+		<div class="card">
+			<div class="card-header">One by One</div>
+			<div class="card-body">
 
-	<div class="card">
-		<div class="card-header">One by One</div>
-		<div class="card-body">
-
-			<div class="form-row">
-				<div class="form-group col-md-6">
-					<label for="inputEmail4">Fristname</label> <input type="text"
-						class="form-control" id="inputEmail4">
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="inputEmail4">Fristname</label> <input type="text"
+							class="form-control" id="inputEmail4" name="firstname">
+					</div>
+					<div class="form-group col-md-6">
+						<label for="inputPassword4">Lastname</label> <input type="text"
+							class="form-control" id="inputPassword4" name="lastname">
+					</div>
 				</div>
-				<div class="form-group col-md-6">
-					<label for="inputPassword4">Lastname</label> <input type="text"
-						class="form-control" id="inputPassword4">
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="inputEmail4">Username</label> <input type="text"
+							class="form-control" id="inputEmail4" name="username">
+					</div>
+					<div class="form-group col-md-6">
+						<label for="inputPassword4">Password</label> <input type="text"
+							class="form-control" id="inputPassword4" name="password">
+					</div>
 				</div>
 			</div>
-			<div class="form-row">
-				<div class="form-group col-md-6">
-					<label for="inputEmail4">Username</label> <input type="text"
-						class="form-control" id="inputEmail4">
-				</div>
-				<div class="form-group col-md-6">
-					<label for="inputPassword4">Password</label> <input type="text"
-						class="form-control" id="inputPassword4">
-				</div>
+
+
+			<div class="card-footer text-muted">
+				<button type="submit" value="Submit" class="btn btn-primary btn-lg btn-block">ADD</button>
 			</div>
 		</div>
-
-
-		<div class="card-footer text-muted">
-			<button type="submit" class="btn btn-primary btn-lg btn-block">ADD</button>
-		</div>
-	</div>
-
-	</br>
+	</form>
+	<br>
 
 	<div class="card">
 		<div class="card-header">Import</div>
