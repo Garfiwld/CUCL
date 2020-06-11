@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+
+	<display-name>CUCL</display-name>
+	<!-- <servlet>
+		<description></description>
+		<display-name>signon</display-name>
+		<servlet-name>signon</servlet-name>
+		<servlet-class>com.cucl.servlet.signon</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>signon</servlet-name>
+		<url-pattern>/signon</url-pattern>
+	</servlet-mapping> -->
+	
+	<servlet>
+		<description></description>
+		<display-name>signout</display-name>
+		<servlet-name>signout</servlet-name>
+		<servlet-class>com.cucl.servlet.signout</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>signout</servlet-name>
+		<url-pattern>/signout</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
