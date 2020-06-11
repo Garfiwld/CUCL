@@ -23,13 +23,13 @@
 					Course</a> <a href="editRoom.jsp">Edit Room</a></li>
 		</ul>
 		<%
-			}
+			}else{
 		%>
 
-		<%
+		<%-- <%
 		if (session.getAttribute("username") != null
 		&& session.getAttribute("username").toString().toLowerCase().indexOf("tur") > -1) {
-		%>
+		%> --%>
 		<div class="form-group">
 			<select class="form-control" id="exampleFormControlSelect1">
 				<option>Algorithm</option>
@@ -38,6 +38,11 @@
 		<div class="form-group">
 			<select class="form-control" id="exampleFormControlSelect1">
 				<option>Sec. 1</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<select class="form-control" id="exampleFormControlSelect1">
+				<option>618</option>
 			</select>
 		</div>
 		<button class="btn btn-primary btn-block" type="submit">START</button>
@@ -82,8 +87,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Page</a>
                         </li> -->
-						<li class="nav-item"><a class="nav-link" href="#">Profile</a>
-						</li>
+						<li class="nav-item"><a class="nav-link" href="#"><%=session.getAttribute("username") %></a></li>
 						<li class="nav-item"><a class="nav-link" href="signout">Logout</a></li>
 					</ul>
 				</div>

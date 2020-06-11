@@ -36,11 +36,11 @@
 				</div>
 			</div>
 			<div class="form-row">
-				<div class="form-group col-md-8">
+				<div class="form-group col-md-6">
 					<label for="inputUsername">Username</label> <input type="text"
 						class="form-control" id="inputUsername">
 				</div>
-				<div class="form-group col-md-4">
+				<div class="form-group col-md-6">
 					<label for="inputState">Section</label> <select id="inputState"
 						class="form-control">
 						<option selected>RA</option>
